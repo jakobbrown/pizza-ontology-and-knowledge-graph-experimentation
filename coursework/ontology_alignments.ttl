@@ -1,0 +1,56 @@
+@prefix jb: <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/> .
+@prefix ns1: <http://www.w3.org/2002/07/owl#> .
+@prefix pi: <http://www.co-ode.org/ontologies/pizza#> .
+
+pi:American ns1:equivalentClass jb:Americana .
+
+pi:AmericanHot ns1:equivalentClass jb:Americana .
+
+pi:AnchoviesTopping ns1:equivalentClass jb:Anchovy .
+
+pi:CheeseTopping ns1:equivalentClass jb:Cheese_topping .
+
+pi:ChickenTopping ns1:equivalentClass jb:Chicken .
+
+pi:Country ns1:equivalentClass jb:Country .
+
+pi:HamTopping ns1:equivalentClass jb:Ham .
+
+pi:Margherita ns1:equivalentClass jb:Margherita .
+
+pi:MeatTopping ns1:equivalentClass jb:Meat_topping .
+
+pi:MeatyPizza ns1:equivalentClass jb:Meat_pizza .
+
+pi:MozzarellaTopping ns1:equivalentClass jb:Mozzarella .
+
+pi:PepperTopping ns1:equivalentClass jb:Pepperoni .
+
+pi:Pizza ns1:equivalentClass jb:Pizza .
+
+pi:PizzaBase ns1:equivalentClass jb:Pizza_base .
+
+pi:PizzaTopping ns1:equivalentClass jb:Pizza_topping .
+
+pi:VegetableTopping ns1:equivalentClass jb:Vegetable_topping .
+
+pi:VegetarianPizza ns1:equivalentClass jb:Vegetarian_pizza .
+
+pi:VegetarianPizzaEquivalent1 ns1:equivalentClass jb:Vegetarian_pizza .
+
+pi:VegetarianPizzaEquivalent2 ns1:equivalentClass jb:Vegetarian_pizza .
+
+pi:VegetarianTopping ns1:equivalentClass jb:Vegetarian_friendly_topping .
+
+pi:hasBase ns1:equivalentProperty jb:Base .
+
+pi:hasIngredient ns1:equivalentProperty jb:Ingredient .
+
+pi:hasTopping ns1:equivalentProperty jb:Topping .
+
+pi:isBaseOf ns1:equivalentProperty jb:Base_of .
+
+pi:isIngredientOf ns1:equivalentProperty jb:Ingredient_of .
+
+pi:isToppingOf ns1:equivalentProperty jb:Topping_of .
+

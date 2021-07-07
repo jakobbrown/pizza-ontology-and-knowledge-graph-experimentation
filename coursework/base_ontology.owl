@@ -1,0 +1,1018 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/jake/ontologies/2021/2/jbrown"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/jake/ontologies/2021/2/jbrown">
+    <Prefix name="" IRI="http://www.semanticweb.org/jake/ontologies/2021/2/jbrown#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">Ontology designed for modelling of &apos;Pizza_data&apos; for Semnatic Web Technologies and Knowledge Graphs coursework, MSc in Data Science, City, University of London</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">Reference for resource which aided with creating ontology and navigating Protege:
+
+https://www.youtube.com/watch?v=ZgTR2B1gkdM</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <Literal xml:lang="en">Report, and Supporting notebook</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="/Americana"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Anchovy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Bacon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Beef"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Bianca"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Cheese_topping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Chicken"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Chocolate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Chorizo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/City"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Country"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Crab"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Deep_dish"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Dessert_pizza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Dessert_topping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Establishment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Ham"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Hawaiian"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Lamb"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Margherita"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Meat_pizza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Meat_topping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Miscellaneous_vegetarian_topping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Mozzarella"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Mussel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Oyster"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Pancetta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Pastrami"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Pepperoni"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Pineapple"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Pizza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Pizza_base"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Pizza_topping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Pork"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Prosciutto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Salami"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Salmon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Sardine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Sausage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Seafood_pizza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Seafood_topping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Shrimp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Specific_pizza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/State"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Steak"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Thin_crust"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Tuna"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Vegetable_topping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Vegetarian_friendly_topping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Vegetarian_pizza"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/Has_base"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/Has_ingredient"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/Has_location"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/Has_topping"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/Is_base_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/Is_ingredient_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/Is_located_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/Is_topping_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/Served_at"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/Serves"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/Has_address"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/Has_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/Has_postcode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/Has_price"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="/Created_by"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="/Americana"/>
+        <Class IRI="/Meat_pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Americana"/>
+        <Class IRI="/Specific_pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Americana"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/Has_topping"/>
+            <Class IRI="/Cheese_topping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Americana"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/Has_topping"/>
+            <Class IRI="/Pepperoni"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Anchovy"/>
+        <Class IRI="/Seafood_topping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Bacon"/>
+        <Class IRI="/Pork"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Beef"/>
+        <Class IRI="/Meat_topping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Bianca"/>
+        <Class IRI="/Specific_pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Cheese_topping"/>
+        <Class IRI="/Vegetarian_friendly_topping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Chicken"/>
+        <Class IRI="/Meat_topping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Chocolate"/>
+        <Class IRI="/Dessert_topping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Chorizo"/>
+        <Class IRI="/Pork"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/City"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/Is_located_in"/>
+            <Class IRI="/Country"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/City"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/Is_located_in"/>
+            <Class IRI="/State"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Crab"/>
+        <Class IRI="/Seafood_topping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Deep_dish"/>
+        <Class IRI="/Pizza_base"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Dessert_pizza"/>
+        <Class IRI="/Specific_pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Dessert_pizza"/>
+        <Class IRI="/Vegetarian_pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Dessert_pizza"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/Has_topping"/>
+            <Class IRI="/Dessert_topping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Dessert_topping"/>
+        <Class IRI="/Vegetarian_friendly_topping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Establishment"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/Is_located_in"/>
+            <Class IRI="/City"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Establishment"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/Is_located_in"/>
+            <Class IRI="/Country"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Establishment"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/Is_located_in"/>
+            <Class IRI="/State"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Ham"/>
+        <Class IRI="/Pork"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Hawaiian"/>
+        <Class IRI="/Meat_pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Hawaiian"/>
+        <Class IRI="/Specific_pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Hawaiian"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/Has_topping"/>
+            <Class IRI="/Cheese_topping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Hawaiian"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/Has_topping"/>
+            <Class IRI="/Ham"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Hawaiian"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/Has_topping"/>
+            <Class IRI="/Pineapple"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Lamb"/>
+        <Class IRI="/Meat_topping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Margherita"/>
+        <Class IRI="/Specific_pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Margherita"/>
+        <Class IRI="/Vegetarian_pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Margherita"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/Has_topping"/>
+            <Class IRI="/Mozzarella"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Meat_pizza"/>
+        <Class IRI="/Pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Meat_pizza"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/Has_topping"/>
+            <Class IRI="/Meat_topping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Meat_topping"/>
+        <Class IRI="/Pizza_topping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Miscellaneous_vegetarian_topping"/>
+        <Class IRI="/Vegetarian_friendly_topping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Mozzarella"/>
+        <Class IRI="/Cheese_topping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Mussel"/>
+        <Class IRI="/Seafood_topping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Oyster"/>
+        <Class IRI="/Seafood_topping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Pancetta"/>
+        <Class IRI="/Pork"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Pastrami"/>
+        <Class IRI="/Beef"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Pepperoni"/>
+        <Class IRI="/Pork"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Pineapple"/>
+        <Class IRI="/Miscellaneous_vegetarian_topping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Pizza"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/Has_base"/>
+            <Class IRI="/Pizza_base"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Pizza"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/Served_at"/>
+            <Class IRI="/Establishment"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Pizza"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/Has_price"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Pork"/>
+        <Class IRI="/Meat_topping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Prosciutto"/>
+        <Class IRI="/Pork"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Salami"/>
+        <Class IRI="/Pork"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Salmon"/>
+        <Class IRI="/Seafood_topping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Sardine"/>
+        <Class IRI="/Seafood_topping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Sausage"/>
+        <Class IRI="/Pork"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Seafood_pizza"/>
+        <Class IRI="/Pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Seafood_pizza"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/Has_topping"/>
+            <Class IRI="/Seafood_topping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Seafood_topping"/>
+        <Class IRI="/Pizza_topping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Shrimp"/>
+        <Class IRI="/Seafood_topping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Specific_pizza"/>
+        <Class IRI="/Pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/State"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/Is_located_in"/>
+            <Class IRI="/Country"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Steak"/>
+        <Class IRI="/Beef"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Thin_crust"/>
+        <Class IRI="/Pizza_base"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Tuna"/>
+        <Class IRI="/Seafood_topping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Vegetable_topping"/>
+        <Class IRI="/Vegetarian_friendly_topping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Vegetarian_friendly_topping"/>
+        <Class IRI="/Pizza_topping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Vegetarian_pizza"/>
+        <Class IRI="/Pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Vegetarian_pizza"/>
+        <ObjectComplementOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="/Has_topping"/>
+                <Class IRI="/Meat_topping"/>
+            </ObjectSomeValuesFrom>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Vegetarian_pizza"/>
+        <ObjectComplementOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="/Has_topping"/>
+                <Class IRI="/Seafood_topping"/>
+            </ObjectSomeValuesFrom>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="/Deep_dish"/>
+        <Class IRI="/Thin_crust"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/Meat_pizza"/>
+        <Class IRI="/Vegetarian_pizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/Meat_topping"/>
+        <Class IRI="/Seafood_topping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/Meat_topping"/>
+        <Class IRI="/Vegetarian_friendly_topping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/Pizza"/>
+        <Class IRI="/Pizza_base"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/Pizza"/>
+        <Class IRI="/Pizza_topping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/Seafood_pizza"/>
+        <Class IRI="/Vegetarian_pizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/Seafood_topping"/>
+        <Class IRI="/Vegetarian_friendly_topping"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/Has_base"/>
+        <ObjectProperty IRI="/Has_ingredient"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/Has_topping"/>
+        <ObjectProperty IRI="/Has_ingredient"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/Is_base_of"/>
+        <ObjectProperty IRI="/Is_ingredient_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/Is_topping_of"/>
+        <ObjectProperty IRI="/Is_ingredient_of"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/Has_base"/>
+        <ObjectProperty IRI="/Is_base_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/Has_ingredient"/>
+        <ObjectProperty IRI="/Is_ingredient_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/Has_location"/>
+        <ObjectProperty IRI="/Is_located_in"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/Has_topping"/>
+        <ObjectProperty IRI="/Is_topping_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/Served_at"/>
+        <ObjectProperty IRI="/Serves"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/Has_base"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/Served_at"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="/Is_base_of"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="/Serves"/>
+    </InverseFunctionalObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="/Has_location"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="/Is_located_in"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/Is_base_of"/>
+        <Class IRI="/Pizza_base"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/Is_topping_of"/>
+        <Class IRI="/Pizza_topping"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/Served_at"/>
+        <Class IRI="/Pizza"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/Serves"/>
+        <Class IRI="/Establishment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/Has_base"/>
+        <Class IRI="/Pizza_base"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/Is_base_of"/>
+        <Class IRI="/Pizza"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/Is_topping_of"/>
+        <Class IRI="/Pizza"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/Served_at"/>
+        <Class IRI="/Establishment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/Serves"/>
+        <Class IRI="/Pizza"/>
+    </ObjectPropertyRange>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="/Is_base_of"/>
+        <ObjectProperty IRI="/Is_topping_of"/>
+    </DisjointObjectProperties>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/Has_address"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/Has_postcode"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/Has_address"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/Has_name"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/Has_postcode"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/Has_price"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="/Has_address"/>
+        <Class IRI="/Establishment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/Has_postcode"/>
+        <Class IRI="/Establishment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/Has_price"/>
+        <Class IRI="/Pizza"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="/Has_address"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/Has_name"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/Has_postcode"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/Has_price"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Americana</IRI>
+        <Literal xml:lang="en">Tomato base, cheese topping, pepperoni topping. Can contain other ingredients/has different interpreations.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Americana</IRI>
+        <Literal xml:lang="en">Americana</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Beef</IRI>
+        <Literal xml:lang="en">Meat from a cow.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Beef</IRI>
+        <Literal xml:lang="en">Beef</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Bianca</IRI>
+        <Literal xml:lang="en">Has no tomato sauce base.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Bianca</IRI>
+        <Literal xml:lang="en">Bianca</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Cheese_topping</IRI>
+        <Literal xml:lang="en">Many different cheeses are found on pizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Cheese_topping</IRI>
+        <Literal xml:lang="en">Cheese_topping</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Chicken</IRI>
+        <Literal xml:lang="en">Meat from a chicken</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Chicken</IRI>
+        <Literal xml:lang="en">Chicken</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/City</IRI>
+        <Literal>A large town in which people live, and - in this case - in which there are estbalishments that make and serve pizza.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/City</IRI>
+        <Literal xml:lang="en">City</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Country</IRI>
+        <Literal xml:lang="en">A nation with its own government, that occupies a paricular territory.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Country</IRI>
+        <Literal xml:lang="en">Country</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Deep_dish</IRI>
+        <Literal xml:lang="en">Any base that is specifically defined as deep dish or &apos;Chicago style&apos; in the item name or description.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Deep_dish</IRI>
+        <Literal xml:lang="en">Deep_dish</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Dessert_pizza</IRI>
+        <Literal xml:lang="en">A non-traditinal pizza, which could be consumed as a dessert, by topping the dough base with sweet toppings or sauces, and perhaps using a sweeter dough for the base.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Dessert_pizza</IRI>
+        <Literal xml:lang="en">Dessert_pizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Establishment</IRI>
+        <Literal xml:lang="en">The name of the restaurant/company.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Establishment</IRI>
+        <Literal xml:lang="en">Establishment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Hawaiian</IRI>
+        <Literal xml:lang="en">Traditionally has pineapple and ham as toppings, as well as classic tomato sauce and melted cheese.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Hawaiian</IRI>
+        <Literal xml:lang="en">Hawaiian</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Lamb</IRI>
+        <Literal xml:lang="en">Meat from a sheep or lamb.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Lamb</IRI>
+        <Literal xml:lang="en">Lamb</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Margherita</IRI>
+        <Literal xml:lang="en">Tomato base, cheese topping, basil topping, nothing else.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Margherita</IRI>
+        <Literal xml:lang="en">Margherita</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Meat_pizza</IRI>
+        <Literal xml:lang="en">Having meat as an ingredient.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Meat_pizza</IRI>
+        <Literal xml:lang="en">Meat_pizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Meat_topping</IRI>
+        <Literal xml:lang="en">Toppings that contain meat, and therefore would not be suitable for vegetarians.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Meat_topping</IRI>
+        <Literal xml:lang="en">Meat_topping</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Pizza</IRI>
+        <Literal xml:lang="en">The different types of pizza, classed with attention to the different types of pizza in the data set &apos;Pizza_data&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Pizza</IRI>
+        <Literal xml:lang="en">&quot;a dish of Italian origin, traditionally consisting of a flat round base of dough baked with a topping of tomatoes and cheese, typically with added meat, fish, or vegetables.&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Pizza</IRI>
+        <Literal xml:lang="en">Pizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Pizza_base</IRI>
+        <Literal xml:lang="en">different types of base, specifically with regards to the thickness of the dough.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Pizza_base</IRI>
+        <Literal xml:lang="en">The dough component of the pizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Pizza_base</IRI>
+        <Literal xml:lang="en">Pizza_base</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Pizza_topping</IRI>
+        <Literal xml:lang="en">Different pizza toppings</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Pizza_topping</IRI>
+        <Literal xml:lang="en">Anything that goes on top of the base of the pizza.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Pizza_topping</IRI>
+        <Literal xml:lang="en">Pizza_topping</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Pork</IRI>
+        <Literal xml:lang="en">Meat from a pig.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Pork</IRI>
+        <Literal xml:lang="en">Pork</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Seafood_pizza</IRI>
+        <Literal xml:lang="en">Having seafood as an ingredient</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Seafood_pizza</IRI>
+        <Literal xml:lang="en">Seafood_pizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Seafood_topping</IRI>
+        <Literal xml:lang="en">Any topping that has come from the sea e.g fish, crustacean etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Seafood_topping</IRI>
+        <Literal xml:lang="en">Seafood_topping</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Specific_pizza</IRI>
+        <Literal xml:lang="en">Any pizza that has a particular name, or a generally fixed style or combination of ingredients.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Specific_pizza</IRI>
+        <Literal xml:lang="en">Specific_pizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/State</IRI>
+        <Literal xml:lang="en">A sub-territory within a country which has its own smaller governing body.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/State</IRI>
+        <Literal xml:lang="en">State</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Thin_crust</IRI>
+        <Literal xml:lang="en">Any base that is specifically desfined as thin or &apos;crispy&apos; in the item name of description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Thin_crust</IRI>
+        <Literal xml:lang="en">Thin_crust</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Vegetarian_friendly_topping</IRI>
+        <Literal xml:lang="en">Toppings that are anything except for meat or cheese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Vegetarian_friendly_topping</IRI>
+        <Literal xml:lang="en">Vegetarian_friendly_topping</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Vegetarian_pizza</IRI>
+        <Literal xml:lang="en">Any pizza that is suitable for vegetarians e.g. contains no meat or fish.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Vegetarian_pizza</IRI>
+        <Literal xml:lang="en">Vegetarian_pizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="/Created_by"/>
+        <AbbreviatedIRI>rdfs:Literal</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <DatatypeDefinition>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DatatypeDefinition>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

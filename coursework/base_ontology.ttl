@@ -1,0 +1,547 @@
+@prefix : <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown> .
+
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown> rdf:type owl:Ontology ;
+                                                            rdfs:comment "Ontology designed for modelling of 'Pizza_data' for Semnatic Web Technologies and Knowledge Graphs coursework, MSc in Data Science, City, University of London"@en ,
+                                                                         """Reference for resource which aided with creating ontology and navigating Protege:
+
+https://www.youtube.com/watch?v=ZgTR2B1gkdM"""@en ;
+                                                            rdfs:seeAlso "Report, and Supporting notebook"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Created_by
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Created_by> rdf:type owl:AnnotationProperty ;
+                                                                      rdfs:range rdfs:Literal .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#Literal
+rdfs:Literal owl:equivalentClass xsd:float .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_base
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_base> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:subPropertyOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_ingredient> ;
+                                                                    owl:inverseOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Is_base_of> ;
+                                                                    rdf:type owl:FunctionalProperty ;
+                                                                    rdfs:range <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza_base> ;
+                                                                    rdfs:comment "Specifies the type of base the pizza has."@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_ingredient
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_ingredient> rdf:type owl:ObjectProperty ;
+                                                                          owl:inverseOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Is_ingredient_of> ;
+                                                                          rdfs:comment "Contains or is made up of a certain ingredient"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_location
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_location> rdf:type owl:ObjectProperty ;
+                                                                        owl:inverseOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Is_located_in> ;
+                                                                        rdf:type owl:TransitiveProperty ;
+                                                                        rdfs:comment "Specifies the location(s) within the location at hand."@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_topping
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_topping> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:subPropertyOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_ingredient> ;
+                                                                       owl:inverseOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Is_topping_of> ;
+                                                                       rdfs:comment "Specifies the topping(s) the pizzas has."@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Is_base_of
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Is_base_of> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:subPropertyOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Is_ingredient_of> ;
+                                                                      rdf:type owl:InverseFunctionalProperty ;
+                                                                      rdfs:domain <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza_base> ;
+                                                                      rdfs:range <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza> ;
+                                                                      owl:propertyDisjointWith <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Is_topping_of> ;
+                                                                      rdfs:comment "Specifies the pizza(s) this base is a component of."@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Is_ingredient_of
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Is_ingredient_of> rdf:type owl:ObjectProperty ;
+                                                                            rdfs:comment "Specifies the pizza(s) that this ingredient is a component of."@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Is_located_in
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Is_located_in> rdf:type owl:ObjectProperty ,
+                                                                                  owl:TransitiveProperty ;
+                                                                         rdfs:comment "Sepcifies the location(s) that this location is located within."@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Is_topping_of
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Is_topping_of> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:subPropertyOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Is_ingredient_of> ;
+                                                                         rdfs:domain <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza_topping> ;
+                                                                         rdfs:range <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza> ;
+                                                                         rdfs:comment "Specifies the pizza(s) this ingredient is the topping of."@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Served_at
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Served_at> rdf:type owl:ObjectProperty ;
+                                                                     owl:inverseOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Serves> ;
+                                                                     rdf:type owl:FunctionalProperty ;
+                                                                     rdfs:domain <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza> ;
+                                                                     rdfs:range <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Establishment> ;
+                                                                     rdfs:comment "Specifies the estblishment that this particular pizza is served at."@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Serves
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Serves> rdf:type owl:ObjectProperty ,
+                                                                           owl:InverseFunctionalProperty ;
+                                                                  rdfs:domain <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Establishment> ;
+                                                                  rdfs:range <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza> ;
+                                                                  rdfs:comment "Specfies the pizzas that this establishment serves."@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_address
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_address> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                                                       rdf:type owl:FunctionalProperty ;
+                                                                       rdfs:domain <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Establishment> ;
+                                                                       rdfs:range rdfs:Literal ;
+                                                                       rdfs:comment "The address of the establishment."@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_name
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_name> rdf:type owl:DatatypeProperty ,
+                                                                             owl:FunctionalProperty ;
+                                                                    rdfs:range rdfs:Literal ;
+                                                                    rdfs:comment "The name of the pizza, as specified in the data set"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_postcode
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_postcode> rdf:type owl:DatatypeProperty ;
+                                                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                                                        rdf:type owl:FunctionalProperty ;
+                                                                        rdfs:domain <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Establishment> ;
+                                                                        rdfs:range rdfs:Literal ;
+                                                                        rdfs:comment "The postcode of the establishment."@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_price
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_price> rdf:type owl:DatatypeProperty ,
+                                                                              owl:FunctionalProperty ;
+                                                                     rdfs:domain <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza> ;
+                                                                     rdfs:range xsd:float ;
+                                                                     rdfs:comment "The price of the pizza, as specified on the menu (possibly N/A), as type xsd:float."@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Americana
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Americana> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Meat_pizza> ,
+                                                                                     <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Specific_pizza> ,
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_topping> ;
+                                                                                       owl:someValuesFrom <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Cheese_topping>
+                                                                                     ] ,
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_topping> ;
+                                                                                       owl:someValuesFrom <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pepperoni>
+                                                                                     ] ;
+                                                                     rdfs:isDefinedBy "Tomato base, cheese topping, pepperoni topping. Can contain other ingredients/has different interpreations."@en ;
+                                                                     rdfs:label "Americana"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Anchovy
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Anchovy> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Seafood_topping> .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Bacon
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Bacon> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pork> .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Beef
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Beef> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Meat_topping> ;
+                                                                rdfs:isDefinedBy "Meat from a cow."@en ;
+                                                                rdfs:label "Beef"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Bianca
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Bianca> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Specific_pizza> ;
+                                                                  rdfs:isDefinedBy "Has no tomato sauce base."@en ;
+                                                                  rdfs:label "Bianca"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Cheese_topping
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Cheese_topping> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Vegetarian_friendly_topping> ;
+                                                                          rdfs:comment "Many different cheeses are found on pizza"@en ;
+                                                                          rdfs:label "Cheese_topping"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Chicken
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Chicken> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Meat_topping> ;
+                                                                   rdfs:isDefinedBy "Meat from a chicken"@en ;
+                                                                   rdfs:label "Chicken"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Chocolate
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Chocolate> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Dessert_topping> .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Chorizo
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Chorizo> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pork> .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/City
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/City> rdf:type owl:Class ;
+                                                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Is_located_in> ;
+                                                                                  owl:someValuesFrom <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Country>
+                                                                                ] ,
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Is_located_in> ;
+                                                                                  owl:someValuesFrom <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/State>
+                                                                                ] ;
+                                                                rdfs:isDefinedBy "A large town in which people live, and - in this case - in which there are estbalishments that make and serve pizza." ;
+                                                                rdfs:label "City"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Country
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Country> rdf:type owl:Class ;
+                                                                   rdfs:isDefinedBy "A nation with its own government, that occupies a paricular territory."@en ;
+                                                                   rdfs:label "Country"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Crab
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Crab> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Seafood_topping> .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Deep_dish
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Deep_dish> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza_base> ;
+                                                                     owl:disjointWith <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Thin_crust> ;
+                                                                     rdfs:comment "Any base that is specifically defined as deep dish or 'Chicago style' in the item name or description."@en ;
+                                                                     rdfs:label "Deep_dish"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Dessert_pizza
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Dessert_pizza> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Specific_pizza> ,
+                                                                                         <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Vegetarian_pizza> ,
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_topping> ;
+                                                                                           owl:someValuesFrom <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Dessert_topping>
+                                                                                         ] ;
+                                                                         rdfs:isDefinedBy "A non-traditinal pizza, which could be consumed as a dessert, by topping the dough base with sweet toppings or sauces, and perhaps using a sweeter dough for the base."@en ;
+                                                                         rdfs:label "Dessert_pizza"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Dessert_topping
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Dessert_topping> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Vegetarian_friendly_topping> .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Establishment
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Establishment> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Is_located_in> ;
+                                                                                           owl:someValuesFrom <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/City>
+                                                                                         ] ,
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Is_located_in> ;
+                                                                                           owl:someValuesFrom <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Country>
+                                                                                         ] ,
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Is_located_in> ;
+                                                                                           owl:someValuesFrom <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/State>
+                                                                                         ] ;
+                                                                         rdfs:comment "The name of the restaurant/company."@en ;
+                                                                         rdfs:label "Establishment"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Ham
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Ham> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pork> .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Hawaiian
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Hawaiian> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Meat_pizza> ,
+                                                                                    <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Specific_pizza> ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_topping> ;
+                                                                                      owl:someValuesFrom <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Cheese_topping>
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_topping> ;
+                                                                                      owl:someValuesFrom <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Ham>
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_topping> ;
+                                                                                      owl:someValuesFrom <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pineapple>
+                                                                                    ] ;
+                                                                    rdfs:isDefinedBy "Traditionally has pineapple and ham as toppings, as well as classic tomato sauce and melted cheese."@en ;
+                                                                    rdfs:label "Hawaiian"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Lamb
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Lamb> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Meat_topping> ;
+                                                                rdfs:isDefinedBy "Meat from a sheep or lamb."@en ;
+                                                                rdfs:label "Lamb"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Margherita
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Margherita> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Specific_pizza> ,
+                                                                                      <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Vegetarian_pizza> ,
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_topping> ;
+                                                                                        owl:someValuesFrom <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Mozzarella>
+                                                                                      ] ;
+                                                                      rdfs:isDefinedBy "Tomato base, cheese topping, basil topping, nothing else."@en ;
+                                                                      rdfs:label "Margherita"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Meat_pizza
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Meat_pizza> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza> ,
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_topping> ;
+                                                                                        owl:someValuesFrom <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Meat_topping>
+                                                                                      ] ;
+                                                                      owl:disjointWith <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Vegetarian_pizza> ;
+                                                                      rdfs:isDefinedBy "Having meat as an ingredient."@en ;
+                                                                      rdfs:label "Meat_pizza"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Meat_topping
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Meat_topping> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza_topping> ;
+                                                                        owl:disjointWith <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Seafood_topping> ,
+                                                                                         <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Vegetarian_friendly_topping> ;
+                                                                        rdfs:isDefinedBy "Toppings that contain meat, and therefore would not be suitable for vegetarians."@en ;
+                                                                        rdfs:label "Meat_topping"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Miscellaneous_vegetarian_topping
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Miscellaneous_vegetarian_topping> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Vegetarian_friendly_topping> .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Mozzarella
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Mozzarella> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Cheese_topping> .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Mussel
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Mussel> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Seafood_topping> .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Oyster
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Oyster> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Seafood_topping> .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pancetta
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pancetta> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pork> .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pastrami
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pastrami> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Beef> .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pepperoni
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pepperoni> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pork> .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pineapple
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pineapple> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Miscellaneous_vegetarian_topping> .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_base> ;
+                                                                                   owl:someValuesFrom <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza_base>
+                                                                                 ] ,
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Served_at> ;
+                                                                                   owl:someValuesFrom <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Establishment>
+                                                                                 ] ,
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_price> ;
+                                                                                   owl:someValuesFrom xsd:float
+                                                                                 ] ;
+                                                                 owl:disjointWith <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza_base> ,
+                                                                                  <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza_topping> ;
+                                                                 rdfs:comment "The different types of pizza, classed with attention to the different types of pizza in the data set 'Pizza_data'."@en ;
+                                                                 rdfs:isDefinedBy "\"a dish of Italian origin, traditionally consisting of a flat round base of dough baked with a topping of tomatoes and cheese, typically with added meat, fish, or vegetables.\""@en ;
+                                                                 rdfs:label "Pizza"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza_base
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza_base> rdf:type owl:Class ;
+                                                                      rdfs:comment "different types of base, specifically with regards to the thickness of the dough."@en ;
+                                                                      rdfs:isDefinedBy "The dough component of the pizza"@en ;
+                                                                      rdfs:label "Pizza_base"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza_topping
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza_topping> rdf:type owl:Class ;
+                                                                         rdfs:comment "Different pizza toppings"@en ;
+                                                                         rdfs:isDefinedBy "Anything that goes on top of the base of the pizza."@en ;
+                                                                         rdfs:label "Pizza_topping"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pork
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pork> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Meat_topping> ;
+                                                                rdfs:isDefinedBy "Meat from a pig."@en ;
+                                                                rdfs:label "Pork"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Prosciutto
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Prosciutto> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pork> .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Salami
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Salami> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pork> .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Salmon
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Salmon> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Seafood_topping> .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Sardine
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Sardine> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Seafood_topping> .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Sausage
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Sausage> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pork> .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Seafood_pizza
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Seafood_pizza> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza> ,
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_topping> ;
+                                                                                           owl:someValuesFrom <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Seafood_topping>
+                                                                                         ] ;
+                                                                         owl:disjointWith <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Vegetarian_pizza> ;
+                                                                         rdfs:isDefinedBy "Having seafood as an ingredient"@en ;
+                                                                         rdfs:label "Seafood_pizza"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Seafood_topping
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Seafood_topping> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza_topping> ;
+                                                                           owl:disjointWith <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Vegetarian_friendly_topping> ;
+                                                                           rdfs:isDefinedBy "Any topping that has come from the sea e.g fish, crustacean etc."@en ;
+                                                                           rdfs:label "Seafood_topping"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Shrimp
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Shrimp> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Seafood_topping> .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Specific_pizza
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Specific_pizza> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza> ;
+                                                                          rdfs:isDefinedBy "Any pizza that has a particular name, or a generally fixed style or combination of ingredients."@en ;
+                                                                          rdfs:label "Specific_pizza"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/State
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/State> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Is_located_in> ;
+                                                                                   owl:someValuesFrom <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Country>
+                                                                                 ] ;
+                                                                 rdfs:isDefinedBy "A sub-territory within a country which has its own smaller governing body."@en ;
+                                                                 rdfs:label "State"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Steak
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Steak> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Beef> .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Thin_crust
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Thin_crust> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza_base> ;
+                                                                      rdfs:comment "Any base that is specifically desfined as thin or 'crispy' in the item name of description"@en ;
+                                                                      rdfs:label "Thin_crust"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Tuna
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Tuna> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Seafood_topping> .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Vegetable_topping
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Vegetable_topping> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Vegetarian_friendly_topping> .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Vegetarian_friendly_topping
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Vegetarian_friendly_topping> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza_topping> ;
+                                                                                       rdfs:isDefinedBy "Toppings that are anything except for meat or cheese"@en ;
+                                                                                       rdfs:label "Vegetarian_friendly_topping"@en .
+
+
+###  http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Vegetarian_pizza
+<http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Vegetarian_pizza> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Pizza> ,
+                                                                                            [ rdf:type owl:Class ;
+                                                                                              owl:complementOf [ rdf:type owl:Restriction ;
+                                                                                                                 owl:onProperty <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_topping> ;
+                                                                                                                 owl:someValuesFrom <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Meat_topping>
+                                                                                                               ]
+                                                                                            ] ,
+                                                                                            [ rdf:type owl:Class ;
+                                                                                              owl:complementOf [ rdf:type owl:Restriction ;
+                                                                                                                 owl:onProperty <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Has_topping> ;
+                                                                                                                 owl:someValuesFrom <http://www.semanticweb.org/jake/ontologies/2021/2/jbrown/Seafood_topping>
+                                                                                                               ]
+                                                                                            ] ;
+                                                                            rdfs:isDefinedBy "Any pizza that is suitable for vegetarians e.g. contains no meat or fish."@en ;
+                                                                            rdfs:label "Vegetarian_pizza"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
